@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+         
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="">
+         
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="css/html5reset.css">    
+    <link rel = "stylesheet" href = "css/style.css">
+ 
+    <title>Daphney Cajuste</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <a class="skip" href="#main"> Skip to Main Content</a>
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Daphney</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="uil uil-estate"></i> Home
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="blog.html" class="nav__link">
+                <i class="uil uil-user"></i> Blog
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main" id="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+          <button onclick="display_md()"> Display md</button>
+          <ul id="append_md"></ul>
+        </section>
+    <!--==================== MAIN JS ====================-->
+    <script >
+      function display_md() {
+        var li = document.createElement('li'); 
+        // Create anchor element.
+        var a = document.createElement('a'); 
+        // Create the text node for anchor element.
+        var link = document.createTextNode("Blog1");
+           
+        // Append the text node to anchor element.
+        a.appendChild(link); 
+            
+        // Set the title.
+        a.title = "Blog1"; 
+            
+        // Set the href property.
+        a.href = "../build/blog1.md.html"; 
+  
+
+        // Append the anchor element to the body.
+        li.append(a);
+       document.getElementById("append_md").append(li)
+
+       var li2 = document.createElement('li'); 
+       var a2 = document.createElement('a'); 
+        // Create the text node for anchor element.
+        link = document.createTextNode("Blog2");
+           
+        // Append the text node to anchor element.
+        a2.appendChild(link); 
+            
+        // Set the title.
+        a2.title = "Blog2"; 
+            
+        // Set the href property.
+        a2.href = "../build/blog2.md.html"; 
+            
+        // Append the anchor element to the body.
+        li2.append(a2);
+        document.getElementById("append_md").append(li2)
+      }
+
+    </script>
+  </body>
+</html>
